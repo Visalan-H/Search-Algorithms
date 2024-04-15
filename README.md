@@ -80,11 +80,11 @@ n = int(input())
 bi(list1,n,0,(len(list1)-1))
 ```
 ## Sample Input and Output
+![](image.png)
 
+![](image-1.png)
 
-
-
-
+![](image-2.png)
 
 ## Result
 Thus the linear search and binary search algorithm is implemented using python programming.
