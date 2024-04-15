@@ -19,25 +19,65 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
-
-
-
+list1=eval(input())
+a=int(input())
+list1.sort()
+f=0
+for i in range(len(list1)):
+    if(list1[i]==a):
+        print(list1)
+        print("Element found at index: ",i)
+        f=1
+        break
+if(f==0):
+    print(list1)
+    print("Element not found")
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
-
-
-
-
+list1 = eval(input())
+list1.sort()
+low = 0
+high = len(list1)-1
+f,i = 0,0
+n = int(input())
+while(low<=high):
+    mid = low+((high-low)//2)
+    if(list1[mid]==n ):
+        print(list1)
+        print(f"Element found at index:  {mid}")
+        f=1
+        break
+    elif(n>list1[mid]):
+        low = mid+1
+    else:
+        high = mid-1
+    i = i+1
+if(f==0):
+    print(list1)
+    print("Element not found")
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
-
-
-
-
+def bi(list1,n,l,h):
+    if(l>h):
+        print(list1)
+        print("Element not found")
+        return 
+    mid = (l+h)//2
+    if(list1[mid]==n):
+        print(list1)
+        print("Element found at index: ",mid)
+        return
+    elif(list1[mid]>n):
+        bi(list1,n,l,mid-1)
+    else:
+        bi(list1,n,mid+1,h)
+    
+list1 = eval(input())
+list1.sort()
+n = int(input())
+bi(list1,n,0,(len(list1)-1))
 ```
 ## Sample Input and Output
 
